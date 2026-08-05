@@ -1,0 +1,33 @@
+# Le cote IDA n'est pas encore publie: rien n'a jamais tourne dans une IDA
+# licenciee, donc je le garde de cote tant que ce n'est pas verifie pour de
+# vrai. Retirer cette ligne le jour ou c'est fait.
+IDA/
+
+# Blobs proprietaires: jamais versionnes. Voir le README pour les recuperer.
+_blobs/
+*.bin
+*.bts
+
+# Sorties de build de l'extension Ghidra
+Ghidra/loader/build/
+Ghidra/loader/dist/
+Ghidra/loader/lib/*.jar
+
+# Fixtures regenerees par make_qcom_fixtures.py
+Ghidra/fixtures/out/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Java
+*.class
+
+# Editeurs et OS
+*.swp
+*~
+.idea/
+.vscode/
+.DS_Store

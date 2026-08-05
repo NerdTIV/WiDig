@@ -1,0 +1,4 @@
+# symbols.json est genere par ghidra_wl.py --export-symbols.
+# Pas versionne: il contient des noms de fonctions et des format
+# strings extraits du firmware TI, qui est proprietaire.
+symbols.json
