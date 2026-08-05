@@ -1,6 +1,6 @@
-# WL / Ghidra
+# WiDig / Ghidra
 
-The Ghidra side of my WiLink notes. There is a Java extension that recognises
+The Ghidra side of WiDig. There is a Java extension that recognises
 both formats on import, and Python scripts that do the symbolisation
 afterwards.
 
