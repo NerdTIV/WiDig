@@ -21,8 +21,8 @@ because `analyzeHeadless` will not run a Python script (it answers "not started
 with PyGhidra"):
 
 ```bash
-python3 -m venv /opt/ghidra_venv
-/opt/ghidra_venv/bin/pip install pyghidra
+python3 -m venv ~/ghidra_venv
+~/ghidra_venv/bin/pip install pyghidra
 ```
 
 The blobs are not in the repo, they are proprietary TI binaries. They ship with
@@ -82,9 +82,9 @@ that one.
 ## The scripts
 
 ```bash
-/opt/ghidra_venv/bin/python scripts/ghidra_wl.py <wl18xx-fw-4.bin> --project /tmp/proj --name WL18xx --export-symbols data/symbols.json
+~/ghidra_venv/bin/python scripts/ghidra_wl.py <wl18xx-fw-4.bin> --project /tmp/proj --name WL18xx --export-symbols data/symbols.json
 
-/opt/ghidra_venv/bin/python scripts/ghidra_bts.py <TIInit_11.8.32.bts> --project /tmp/proj --name BT_patch --outdir /tmp/bt_patch
+~/ghidra_venv/bin/python scripts/ghidra_bts.py <TIInit_11.8.32.bts> --project /tmp/proj --name BT_patch --outdir /tmp/bt_patch
 ```
 
 `ghidra_wl.py` runs through 9 steps: memory map, vectors, disassembly plus a
@@ -104,7 +104,7 @@ readable dump of everything the run recovered, if you want to use it elsewhere.
 ## Tests
 
 ```bash
-/opt/ghidra_venv/bin/python tests/test_loaders.py --blobs <blob folder>
+~/ghidra_venv/bin/python tests/test_loaders.py --blobs <blob folder>
 ```
 
 17 checks, 0 failure. It checks that the loader claims the file, that it comes

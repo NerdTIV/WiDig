@@ -4,7 +4,7 @@ Teste le loader TIWirelessLoaders en headless.
 
     export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
     export GHIDRA_INSTALL_DIR=/opt/ghidra_12.1.2_PUBLIC
-    /opt/ghidra_venv/bin/python tests/test_loaders.py --blobs <dossier>
+    ~/ghidra_venv/bin/python tests/test_loaders.py --blobs <dossier>
 
 Faut que l'extension soit installee et Ghidra redemarre avant, sinon tout
 echoue et on comprend rien:

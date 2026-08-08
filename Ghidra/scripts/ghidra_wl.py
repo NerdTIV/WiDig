@@ -4,7 +4,7 @@ Charge et symbolise un firmware WiFi TI WiLink dans Ghidra.
 
     export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
     export GHIDRA_INSTALL_DIR=/opt/ghidra_12.1.2_PUBLIC
-    /opt/ghidra_venv/bin/python ghidra_wl.py wl18xx-fw-4.bin --project /tmp/ghidra_proj --name WL18xx
+    ~/ghidra_venv/bin/python ghidra_wl.py wl18xx-fw-4.bin --project /tmp/ghidra_proj --name WL18xx
 
 Passer par pyghidra et pas analyzeHeadless: analyzeHeadless lance pas de
 script Python, il repond "not started with PyGhidra". J'ai perdu une soiree

@@ -22,8 +22,8 @@ export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 ./build.sh install
 ```
 
-Restart Ghidra. Needs Ghidra 12.x and a JDK 21, nothing else: plain javac and
-jar, no gradle.
+Restart Ghidra. Needs Ghidra 12.x, a JDK 21, and `zip`, which build.sh uses to
+pack the extension. No gradle, no Eclipse.
 
 ## Use it
 
@@ -36,10 +36,10 @@ Then, for the naming pass, pyghidra in a venv (`analyzeHeadless` refuses to run
 Python scripts):
 
 ```bash
-python3 -m venv /opt/ghidra_venv
-/opt/ghidra_venv/bin/pip install pyghidra
+python3 -m venv ~/ghidra_venv
+~/ghidra_venv/bin/pip install pyghidra
 
-/opt/ghidra_venv/bin/python Ghidra/scripts/ghidra_wl.py wl18xx-fw-4.bin --project /tmp/proj --name WL18xx
+~/ghidra_venv/bin/python Ghidra/scripts/ghidra_wl.py wl18xx-fw-4.bin --project /tmp/proj --name WL18xx
 ```
 
 435 of the 450 available functions come back named, grouped into 82 source
