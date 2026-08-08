@@ -1,7 +1,7 @@
 /* Petits utilitaires partages par les deux loaders TI.
  *
- * Les memes existent en double dans l'extension Qualcomm. C'est voulu, les
- * deux extensions doivent compiler chacune de leur cote.
+ * Volontairement pas sortis dans une lib commune: une extension Ghidra doit
+ * compiler toute seule, sans dependance a autre chose que Ghidra.
  */
 package wltools.wl;
 

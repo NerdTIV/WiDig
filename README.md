@@ -12,6 +12,41 @@ The tooling targets the WL18xx, but the chunked container belongs to the
 generations too, and it should keep working on the next ones as long as TI
 sticks to the same format.
 
+## Install
+
+```bash
+git clone https://github.com/NerdTIV/WiDig
+cd WiDig/Ghidra/loader
+export GHIDRA_INSTALL_DIR=/opt/ghidra_12.1.2_PUBLIC
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+./build.sh install
+```
+
+Restart Ghidra. Needs Ghidra 12.x and a JDK 21, nothing else: plain javac and
+jar, no gradle.
+
+## Use it
+
+Open a `wl18xx-fw-*.bin` or a `TIInit_*.bts` in Ghidra. The importer recognises
+it on its own and offers `TI WL18xx WiFi firmware (chunked)` or `TI Bluetooth
+init script (.bts patch)`. Memory map, Cortex-M vectors and trace labels are
+laid down at import.
+
+Then, for the naming pass, pyghidra in a venv (`analyzeHeadless` refuses to run
+Python scripts):
+
+```bash
+python3 -m venv /opt/ghidra_venv
+/opt/ghidra_venv/bin/pip install pyghidra
+
+/opt/ghidra_venv/bin/python Ghidra/scripts/ghidra_wl.py wl18xx-fw-4.bin \
+    --project /tmp/proj --name WL18xx
+```
+
+435 of the 450 available functions come back named, grouped into 82 source
+modules. `Ghidra/README.md` covers the rest: the `.bts` script, the symbol
+export, and the tests.
+
 ## What it accepts, measured
 
 Tested against the 18 TI firmwares shipped in `linux-firmware`: 16 accepted.
@@ -38,8 +73,6 @@ disassembles at all. You only lose the symbols.
 WiDig/
 └── Ghidra/     loader (Java extension) + symbolisation scripts + tests
 ```
-
-`Ghidra/` has its own README with the install steps and the usage.
 
 ### About the IDA side
 

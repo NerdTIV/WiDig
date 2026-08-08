@@ -13,9 +13,6 @@ Ghidra/loader/build/
 Ghidra/loader/dist/
 Ghidra/loader/lib/*.jar
 
-# Fixtures regenerees par make_qcom_fixtures.py
-Ghidra/fixtures/out/
-
 # Python
 __pycache__/
 *.py[cod]
