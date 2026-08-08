@@ -9,8 +9,7 @@ ecritures ponctuelles.
 
     export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
     export GHIDRA_INSTALL_DIR=/opt/ghidra_12.1.2_PUBLIC
-    /opt/ghidra_venv/bin/python ghidra_bts.py /chemin/TIInit_11.8.32.bts \
-        --project /tmp/ghidra_proj --name BT_patch
+    /opt/ghidra_venv/bin/python ghidra_bts.py /chemin/TIInit_11.8.32.bts --project /tmp/ghidra_proj --name BT_patch
 
 --dump-only ecrit juste les blobs sur disque, pratique quand Ghidra est pas
 dispo.

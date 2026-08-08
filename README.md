@@ -39,8 +39,7 @@ Python scripts):
 python3 -m venv /opt/ghidra_venv
 /opt/ghidra_venv/bin/pip install pyghidra
 
-/opt/ghidra_venv/bin/python Ghidra/scripts/ghidra_wl.py wl18xx-fw-4.bin \
-    --project /tmp/proj --name WL18xx
+/opt/ghidra_venv/bin/python Ghidra/scripts/ghidra_wl.py wl18xx-fw-4.bin --project /tmp/proj --name WL18xx
 ```
 
 435 of the 450 available functions come back named, grouped into 82 source

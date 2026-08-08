@@ -82,11 +82,9 @@ that one.
 ## The scripts
 
 ```bash
-/opt/ghidra_venv/bin/python scripts/ghidra_wl.py <wl18xx-fw-4.bin> \
-    --project /tmp/proj --name WL18xx --export-symbols data/symbols.json
+/opt/ghidra_venv/bin/python scripts/ghidra_wl.py <wl18xx-fw-4.bin> --project /tmp/proj --name WL18xx --export-symbols data/symbols.json
 
-/opt/ghidra_venv/bin/python scripts/ghidra_bts.py <TIInit_11.8.32.bts> \
-    --project /tmp/proj --name BT_patch --outdir /tmp/bt_patch
+/opt/ghidra_venv/bin/python scripts/ghidra_bts.py <TIInit_11.8.32.bts> --project /tmp/proj --name BT_patch --outdir /tmp/bt_patch
 ```
 
 `ghidra_wl.py` runs through 9 steps: memory map, vectors, disassembly plus a
